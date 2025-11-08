@@ -1,0 +1,24 @@
+# Values for Prometheus Helm chart (example)
+alertmanager:
+  enabled: true
+server:
+  replicaCount: 2
+  persistentVolume:
+    enabled: true
+    size: 10Gi
+  resources:
+    requests:
+      cpu: 250m
+      memory: 256Mi
+    limits:
+      cpu: 1
+      memory: 512Mi
+
+# Values for Grafana Helm chart (optional)
+grafana:
+  enabled: true
+  adminUser: admin
+  adminPassword: grafana123
+  persistence:
+    enabled: true
+    size: 5Gi
